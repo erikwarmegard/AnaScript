@@ -2,6 +2,8 @@ var ctx = document.getElementById('caloriesCanvas').getContext('2d');
 
 d3.csv('http://localhost:1000/activity.csv').then(plotActivity);
 
+// Comment line
+
 function plotActivity(content){
   var Date = content.map(function(d) {
       return d.Date;
