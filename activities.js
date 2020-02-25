@@ -7,7 +7,7 @@ d3.csv('http://localhost:1000/activity.csv').then(plotActivity);
 function plotActivity(content){
   var Date = content.map(function(d) {
       return d.Date;
-  }).reverse();
+  });
 
   var CaloriesBurned = content.map(function(d) {
     var retString = d.CaloriesBurned.substring(0,1);

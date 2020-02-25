@@ -1,78 +1,51 @@
 # https://www.geeksforgeeks.org/python-linear-regression-using-sklearn/
+#https://machinelearningmastery.com/how-to-use-correlation-to-understand-the-relationship-between-variables/
 
-
-import numpy as np
+# generate related variables
+from numpy import mean
+from numpy import std
+from numpy import cov
+from numpy import genfromtxt
+from numpy.random import randn
+from numpy.random import seed
+from matplotlib import pyplot
+from scipy.stats import pearsonr
 import pandas as pd
 import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn import preprocessing, svm
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
 
 
-# Changing the file read location to the location of the dataset
-df = pd.read_csv('bottle.csv')
-df_binary = df[['Salnty', 'T_degC']]
+# seed random number generator
+seed(1)
+# prepare data
+data1 = 20 * randn(1000) + 100
+data2 = data1 + (10 * randn(1000) + 50)
 
-# Taking only the selected two attributes from the dataset
-df_binary.columns = ['Sal', 'Temp']
+# sleep_data = pd.read_csv('sleep.csv', sep=',', names=['StartTime', 'EndTime', 'MinutesAsleep', 'MinutesAwake', 'NumberofAwakenings', 'TimeinBed', 'MinutesREMSleep', 'MinutesLightSleep', 'MinutesDeepSleep'])
+# activity_data = pd.read_csv('activity.csv', sep=',', names=['Date', 'CaloriesBurned', 'Steps', 'Distance', 'Floors', 'Minutes Sedentary', 'Minutes Lightly Active', 'Minutes Fairly Active', 'Minutes Very Active', 'Activity Calories'])
 
-# Renaming the columns for easier writing of the code
-df_binary.head()
+minutes_asleep = pd.read_csv("sleep.csv", sep=',', usecols = ['MinutesAsleep'])
+calories_burned = pd.read_csv("activity.csv", sep=",", usecols = ['CaloriesBurned'])
 
-# Displaying only the 1st  rows along with the column names
-
-sns.lmplot(x ="Sal", y ="Temp", data = df_binary, order = 2, ci = None)
-
-
-# Eliminating NaN or missing input numbers
-df_binary.fillna(method ='ffill', inplace = True)
-
-X = np.array(df_binary['Sal']).reshape(-1, 1)
-y = np.array(df_binary['Temp']).reshape(-1, 1)
-
-# Separating the data into independent and dependent variables
-# Converting each dataframe into a numpy array
-# since each dataframe contains only one column
-df_binary.dropna(inplace = True)
-
-# Dropping any rows with Nan values
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25)
-
-# Splitting the data into training and testing data
-regr = LinearRegression()
-
-regr.fit(X_train, y_train)
-print(regr.score(X_test, y_test))
-
-y_pred = regr.predict(X_test)
-plt.scatter(X_test, y_test, color ='b')
-plt.plot(X_test, y_pred, color ='k')
-
-plt.show()
-# Data scatter of predicted values
+print(minutes_asleep)
 
 
-df_binary500 = df_binary[:][:500]
 
-# Selecting the 1st 500 rows of the data
-sns.lmplot(x ="Sal", y ="Temp", data = df_binary500,
-                               order = 2, ci = None)
 
-                               df_binary500.fillna(method ='ffill', inplace = True)
+# Positive covariance --> The variables change in the same direction. Negative --> The variables change in the opposite direction. covariance = 0 --> Independent variables.
+covariance = cov(data1, data2)
+# The Pearson correlation can be used to summarize the strength of the linear relationshop between two data samples.
+# -1 < corr < 1. Values between -0.5 and 0.5 indicates a less notable correlation, where as values smaller than -0.5 and greater than 0.5 indicates a notable correlation
+corr, _ = pearsonr(data1, data2)
 
-X = np.array(df_binary500['Sal']).reshape(-1, 1)
-y = np.array(df_binary500['Temp']).reshape(-1, 1)
 
-df_binary500.dropna(inplace = True)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25)
+# summarize
+# print('data1: mean=%.3f stdv=%.3f' % (mean(data1), std(data1)))
+# print('data2: mean=%.3f stdv=%.3f' % (mean(data2), std(data2)))
+# print('Pearsons correlation: %.3f' % corr)
+# print(covariance)
 
-regr = LinearRegression()
-regr.fit(X_train, y_train)
-print(regr.score(X_test, y_test))
+# plot
+pyplot.scatter(minutes_asleep, calories_burned)
 
-y_pred = regr.predict(X_test)
-plt.scatter(X_test, y_test, color ='b')
-plt.plot(X_test, y_pred, color ='k')
-
-plt.show()
+pyplot.grid()
+pyplot.show()
