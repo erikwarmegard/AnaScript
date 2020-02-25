@@ -1,39 +1,11 @@
 [X] - Set up file structure
 [X] - Get Server up and running
-[ ] - Store file in folder
-[ ] - Build the basic foundation of the HTML-page
-  - [ ] - Lägg in flera Charts, lägg de bredvid varandra
-  - [ ] - Läs in flera filer, hämta från servern.
-[ ] - Chartanalytics
+[X] - Store file in folder
+[X] - Build the basic foundation of the HTML-page
+  - [X] - Läs in flera filer, hämta från servern.
+[X] - Chartanalytics
 [X] - Create Dolores
 [ ] - Train Dolores
-[ ] - Integrate Dolores in main.js
-[ ] - Skapa filer i kod: https://www.w3schools.com/xml/ajax_xmlhttprequest_send.asp
-
-jQuery AJAX: https://www.youtube.com/watch?v=fEYx8dQr_cQ
-
-https://www.youtube.com/watch?v=5nL7X1UMWsc HUR SER BACKEND UT. HUR HANTERAR PYTHON POST-REQUEST FÖR FUNKIONER
-
-
-$.ajax({
-    type: 'POST',
-    data: my_json_variable,
-    url: 'http://example.com/python_endpoint',
-    success: function(response){ /* deal with the script's output */ }
-});
-
-
-hur pythonkoden ut?
-
-
-
-kalla på pythonfunktioner i javascript:
-https://www.youtube.com/watch?v=Dk4XLN70hpg&feature=youtu.be
-
-
-Talking between langauges:
-https://healeycodes.com/javascript/python/beginners/webdev/2019/04/11/talking-between-languages.html
-
-
-kanske kan va bra:
-https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+[X] - Integrate Dolores in main.js
+[ ] - Expand the dataset
+[ ] - Analyze the possible correlation between calorieburn and deepsleep
