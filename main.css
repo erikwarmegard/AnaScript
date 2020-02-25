@@ -6,8 +6,8 @@ html {
 }
 
 body {
-  background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
-  color:#555;
+  background:linear-gradient(141deg, #ddd 25%, #fff 40%, #eee 55%);
+  color:#222;
   font-family:'Roboto';
   font-weight:300;
   font-size:16px;
@@ -56,7 +56,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  /*background-color: #333;*/
+  /*background-color: #222;*/
   border: thin inset #aaaaaa;
   position: sticky;
 }
@@ -67,7 +67,7 @@ li {
 
 li a {
   display: block;
-  color: #555;
+  color: #222;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -75,21 +75,21 @@ li a {
 
 li a:hover:not(.about) {
   color: white;
-  background-color: #555;
+  background-color: #222;
 }
 
 .active {
   color: white;
-  background-color: #555;
+  background-color: #222;
   opacity:0.6;
 }
 
 .about {
   color: white;
-  background-color: #555;
+  background-color: #222;
 }
 
 .about:hover {
-  background-color: #555;
+  background-color: #222;
   opacity:0.6;
 }
