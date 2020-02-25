@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AnaScript</title>
+    <link rel="stylesheet" href="./main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  </head>
+  <body>
+    <h1 id="title">AnaScript | Analytical Calculations with JavaScript & Python</h1>
+    <ul>
+      <li><a href="index.html">Sleep Patterns</a></li>
+      <li><a href="sleepanalysis.html">Sleep Analysis</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="dolores.html">Dolores</a></li>
+      <li style="float:right"><a class="about" href="about.html">About</a></li>
+    </ul>
+    <h2 style="text-align: center; margin-top: 2%;">About</h2>
+    <p style="margin-left: 10%; margin-right: 10%">This website serves as a graphical representation of analytical software. Data is logged from my FitBit activity bracelet, extracted as CSV-files and uploaded to the local server. Current data available for analysis and plotting is my sleeping habits and activities during the day. <br />HTML, CSS and JavaScript is the front-end functionality. Where the back-bone of the website is run by Nodejs for server and file management.
+Python packages and libraries are used for complex analysis, JavaScript library Chart.js for graphical representation in the interface. <br /><br />-- erikwarmegard</p>
+    <!--
+    <span id="graphWrapper">
+      <div id="canvasActivity">
+        <canvas id="sleep-stages"></canvas>
+      </div>
+      <div id="textbox" style="float: right; margin-right: 30px;">
+        <h2>Analysis of sleep stages</h2>
+        <p>Comparison between actual and recommended time in sleepstages:</p>
+        <p id="awake-time-percentage">erg</p>
+        <p id="deep-sleep-percentage">sdfg</p>
+        <p id="rem-sleep-percentage">cvbn</p>
+        <p id="light-sleep-percentage">srth</p>
+        <br>
+        <p>INNER CIRCLE of diagram is the RECOMMENDED distribution <br />of the different sleeping stages along with the time <br />spent awake during the night.<br /> OUTER CIRCLE is the actual distribution. </p>
+      </div>
+    </span>
+    -->
+    <script src="./sleepanalysis.js"></script>
+  </body>
+</html>

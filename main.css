@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+html {
+  scroll-behavior: smooth;
+  overflow: scroll;
+}
+
+body {
+  background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+  color:#555;
+  font-family:'Roboto';
+  font-weight:300;
+  font-size:16px;
+
+  height:100vh;
+  overflow:hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+}
+
+#title {
+  text-align:center;
+  padding-top:2vh;
+}
+
+#canvasActivity {
+  width: 70%;
+  height: 70%;
+  position: fixed;
+  /*top: 50%;
+  left: 20%; */
+}
+
+#graphWrapper {
+  width: 1200px;
+  height: 660px;
+}
+
+#myCanvas {
+   display: block;
+   width: 933px;
+   height: 466px;
+   margin: 20px;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-top: 20px;
+   margin-bottom: 20px:
+   /*padding: 20px;*/
+   background: #ffffff;
+   border: thin inset #aaaaaa;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /*background-color: #333;*/
+  border: thin inset #aaaaaa;
+  position: sticky;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #555;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.about) {
+  color: white;
+  background-color: #555;
+}
+
+.active {
+  color: white;
+  background-color: #555;
+  opacity:0.6;
+}
+
+.about {
+  color: white;
+  background-color: #555;
+}
+
+.about:hover {
+  background-color: #555;
+  opacity:0.6;
+}
