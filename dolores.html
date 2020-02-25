@@ -19,24 +19,21 @@
       <li><a class="active" href="dolores.html">Dolores</a></li>
       <li style="float:right"><a class="about" href="about.html">About</a></li>
     </ul>
-    <h2 style="text-align: center; margin-top: 10%">The Maze isn't meant for you.</h2>
-    <!--
+    <!--<h2 style="text-align: center; margin-top: 10%">The Maze isn't meant for you.</h2>-->
+
     <span id="graphWrapper">
-      <div id="canvasActivity">
-        <canvas id="sleep-stages"></canvas>
-      </div>
+    <img src="./sleep_calories_regr.png" alt="Correlation graph" width="550"
+         height="490" style="margin-left:20px; margin-top:20px;">
       <div id="textbox" style="float: right; margin-right: 30px;">
-        <h2>Analysis of sleep stages</h2>
-        <p>Comparison between actual and recommended time in sleepstages:</p>
-        <p id="awake-time-percentage">erg</p>
-        <p id="deep-sleep-percentage">sdfg</p>
-        <p id="rem-sleep-percentage">cvbn</p>
-        <p id="light-sleep-percentage">srth</p>
-        <br>
-        <p>INNER CIRCLE of diagram is the RECOMMENDED distribution <br />of the different sleeping stages along with the time <br />spent awake during the night.<br /> OUTER CIRCLE is the actual distribution. </p>
+        <h2>Statistical Analysis by Python program 'Dolores'</h2>
+        <p>Image shown is the correlation between my calorie burn(how active I am during the<br /> day), and the amount of sleep I get during the night that follows.</p>
+        <p style="font-weight: bold;">Covariance: [[4.3927e+00, 2.3649e+02][2.3649e+02, 4.2496e+05]] <br />Pearson correlation: 0.173</p>
+        <p>Covariance describes how dependent the variables are to each other. <br /> If the covariance is positive the variables change in the same direciton, <br /> and it the variables are negative the variables change in the opposite direction. <br/> Covariane = 0 means that the variables are independent of each other.</p>
+        <p>The Pearson correlation can be used to summarize the strength of the <br />linear relationship between two data samples. The pearson variable takes on values<br /> between -1 and 1. Values between -0.5 and 0.5 indicates a less notable correlation, <br />where as values smaller than -0.5 and greater than 0.5 indicates a notable correlation. </p>
+        <p style="font-weight: bold;">Hours of sleep :   Mean = 6.00 hrs, Standard deviation = 2.061 hrs<br />Calories burned : Mean = 3638 kcal, Standard deviation = 640.9 kcal</p>
+        <p><b>Conclusion : </b> A larger dataset would give the analysis more depth. Although some <br />conlusions can already be made. There is a correlation <br />between how much i excercise and what amount of sleep i get the following night due to that excercise. <br />Positive correlation covariance and pearsons value resides in the conclusion that <i>the more I <br />excercise, the longer I sleep.</i></p>
       </div>
     </span>
-    -->
-    <script src="./csv-creator.js"></script>
+    <!--<script src="./csv-creator.js"></script>-->
   </body>
 </html>
