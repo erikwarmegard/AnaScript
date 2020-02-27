@@ -44,9 +44,7 @@ function plotSleep(content){
     if(d.MinutesDeepSleep == 'N/A'){
       return 0;
     }
-
     var deepsleep_min = parseInt(d.MinutesDeepSleep);
-
     var totalSleep = parseInt(d.MinutesAsleep) + parseInt(d.MinutesAwake);
     var ds_percentage = (deepsleep_min/totalSleep) * 100;
 
@@ -57,8 +55,8 @@ function plotSleep(content){
     if(DeepSleepPercentage[i] == 0){
       DeepSleepPercentage.splice(i,1);
     }
-
   }
+
 
   let sumMinutesDeepSleep = DeepSleepPercentage.reduce((previous, current) => current += previous);
   let avgMinutesDeepSleep = (sumMinutesDeepSleep / DeepSleepPercentage.length);

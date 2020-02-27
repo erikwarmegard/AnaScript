@@ -14,11 +14,11 @@ var CaloriesBurned;
 var Date;
 var StartTime;
 var MinutesAsleep;
-var MinutesDeepSleep;
+var DeepSleepPercentage;
 var SleepTrimmed = [];
 var DateTrimmed = [];
 var CaloriesTrimmed = [];
-
+var DSPercentageTrimmed = [];
 
 function extractActivityData(content){
   Date = content.map(function(d) {
@@ -41,13 +41,22 @@ function extractSleepData(content){
     var num = ((parseInt(d.MinutesAsleep))/60);
     return Math.round((num + Number.EPSILON) * 100) / 100;
   });
-  MinutesDeepSleep = content.map(function(d) {
+  DeepSleepPercentage = content.map(function(d) {
     if(d.MinutesDeepSleep == 'N/A'){
       return 0;
     }
-    var num = ((parseInt(d.MinutesDeepSleep))/60);
-    return Math.round((num + Number.EPSILON) * 100) / 100;
+    var deepsleep_min = parseInt(d.MinutesDeepSleep);
+    var totalSleep = parseInt(d.MinutesAsleep) + parseInt(d.MinutesAwake);
+    var ds_percentage = (deepsleep_min/totalSleep) * 100;
+
+    return Math.round((ds_percentage + Number.EPSILON) * 100) / 100;
   });
+
+  for(let i = 0; i < DeepSleepPercentage.length; i++){
+    if(DeepSleepPercentage[i] == 0){
+      DeepSleepPercentage.splice(i,1);
+    }
+  }
 
   for(let i = 0; i < Date.length; i++){
     for(let j = 0; j < Date.length; j++){
@@ -55,13 +64,14 @@ function extractSleepData(content){
         SleepTrimmed.push(MinutesAsleep[j]);
         DateTrimmed.push(Date[i]);
         CaloriesTrimmed.push(CaloriesBurned[i]);
+        DSPercentageTrimmed.push(DeepSleepPercentage[i]);
       }
     }
   }
 
-  var csv = 'Date, Sleep, Calories\n';
+  var csv = 'Date,Sleep,CaloriesBurned,DeepSleepPercentage\n';
   for(let i = 0; i < DateTrimmed.length; i++){
-    csv += DateTrimmed[i] + ',' + SleepTrimmed[i] + ',' + CaloriesTrimmed[i] + '\n';
+    csv += DateTrimmed[i] + ',' + SleepTrimmed[i] + ',' + CaloriesTrimmed[i] + ',' + DSPercentageTrimmed[i] + '\n';
   }
   console.log(csv);
 };
