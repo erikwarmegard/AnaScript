@@ -26,8 +26,8 @@ print('covariance', covariance)
 
 
 scatter = sns.lmplot(x='Calories', y='Sleep', data = df, fit_reg=True)
-#plt.grid()
-#plt.show()
+plt.grid()
+plt.show()
 
 
 

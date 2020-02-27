@@ -17,13 +17,20 @@
       <li><a href="sleepanalysis.html">Sleep Analysis</a></li>
       <li><a href="bedtimedeepsleep.html">Bed Time</a><li>
       <li><a href="activities.html">Activities</a></li>
-      <li><a href="excerciseqos.html">Excercise & QoS</a></li>
+      <li><a class="active"href="excerciseqos.html">Excercise & QoS</a></li>
       <li><a href="dolores.html">Dolores</a></li>
       <li style="float:right"><a class="about" href="about.html">About</a></li>
     </ul>
-    <h2 style="text-align: center; margin-top: 2%;">About</h2>
-    <p style="margin-left: 10%; margin-right: 10%">This website serves as a graphical representation of analytical software. Data is logged from my FitBit activity bracelet, extracted as CSV-files and uploaded to the local server. Current data available for analysis and plotting is my sleeping habits and activities during the day. <br />HTML, CSS and JavaScript is the front-end functionality. Where the back-bone of the website is run by Nodejs for server and file management.
-Python packages and libraries are used for complex analysis, JavaScript library Chart.js for graphical representation in the interface. <br /><br />-- erikwarmegard</p>
-    <!--<script src="./sleepanalysis.js"></script>-->
+    <span id="graphWrapper">
+      <div id="canvasActivity">
+        <canvas id="excercise-qos"></canvas>
+      </div>
+      <div id="textbox" style="float: right; margin-right: 5px;">
+        <h2>Amount of excercise related to<br /> the quality of sleep?</h2>
+        <p id="average-time-asleep"></p>
+        <p></p>
+      </div>
+    </span>
+    <script src="./excercise-qos.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-var ctx = document.getElementById('bedtime-deepsleep').getContext('2d');
+var ctx = document.getElementById('excercise-qos').getContext('2d');
 
 d3.csv('http://localhost:1000/sleep.csv').then(plotSleep);
 

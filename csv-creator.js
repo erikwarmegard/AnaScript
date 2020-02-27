@@ -2,6 +2,10 @@
 Extracts relevant information and customizes the output (CSV) for Dolores which will make the analysis.
 Currently a manual labour.
 Creating the csv-file as outout and from the console.log pasting the output into the designated csv.file
+
+Initialize the process by going to the Dolores-section in the application.
+Look in Console and copy the data
+Remove the header
 */
 
 d3.csv('http://localhost:1000/activity.csv').then(extractActivityData);
