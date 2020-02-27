@@ -7,5 +7,7 @@
 [X] - Create Dolores
 [ ] - Train Dolores
 [X] - Integrate Dolores in main.js
-[ ] - Expand the dataset
-[ ] - Analyze the possible correlation between calorieburn and deepsleep
+[X] - Expand the dataset
+[X] - Analyze the possible correlation between calorieburn and deepsleep
+[ ] - improve file structure
+[ ] - Add new screendumps of project
