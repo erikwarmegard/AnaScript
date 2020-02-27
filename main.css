@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  background:linear-gradient(141deg, #ddd 25%, #fff 40%, #eee 55%);
+  background:linear-gradient(141deg, #f3f3f3 25%, #fff 50%, #f3f3f3 55%);
   color:#222;
   font-family:'Roboto';
   font-weight:300;
