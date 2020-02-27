@@ -39,6 +39,9 @@ function plotSleep(content){
     StartTime.splice(StartTime.indexOf(StartTime.indexOf('X'), 1));
   }
 
+  var TotalSleep = content.map(function(d) {
+    return Math.round((((parseInt(d.MinutesAsleep) + parseInt(d.MinutesAwake))/60) + Number.EPSILON) * 100) / 100;
+  });
 
   var DeepSleepPercentage = content.map(function(d) {
     if(d.MinutesDeepSleep == 'N/A'){
@@ -72,7 +75,14 @@ function plotSleep(content){
               backgroundColor: 'rgba(0, 194, 100, 0.3)',
               borderColor: 'rgba(0, 194, 100, 1)',
               borderWidth: 1
-          }]
+          },
+        {
+              label: 'Hours of sleep',
+              data: TotalSleep,
+              backgroundColor: 'rgba(50, 50, 50, 0.3)',
+              borderColor: 'rgba(50, 50, 50, 0.7)',
+              borderWidth: 1
+        }]
       },
       options: {
         tooltips: {
