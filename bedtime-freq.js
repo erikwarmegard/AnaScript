@@ -142,36 +142,6 @@ function plotSleep(content){
   }
 
 
-  console.log('0TO3',_0TO3);
-  console.log('3TO6',_3TO6);
-  console.log('6TO9',_6TO9);
-  console.log('9TO12',_9TO12);
-  console.log('12TO15',_12TO15);
-  console.log('15TO18',_15TO18);
-  console.log('18TO21',_18TO21);
-  console.log('21TO22',_21TO22);
-  console.log('22TO23',_22TO23);
-  console.log('23TO0',_23TO0);
-
-
-  // TODO: remove this
-  var DeepSleepPercentage = content.map(function(d) {
-    if(d.MinutesDeepSleep == 'N/A'){
-      return 0;
-    }
-    var deepsleep_min = parseInt(d.MinutesDeepSleep);
-    var totalSleep = parseInt(d.MinutesAsleep) + parseInt(d.MinutesAwake);
-    var ds_percentage = (deepsleep_min/totalSleep) * 100;
-
-    return Math.round((ds_percentage + Number.EPSILON) * 100) / 100;
-  });
-
-  for(let i = 0; i < DeepSleepPercentage.length; i++){
-    if(DeepSleepPercentage[i] == 0){
-      DeepSleepPercentage.splice(i,1);
-    }
-  }
-
   var timestamps = [s_0TO3,s_3TO6,s_6TO9,s_9TO12,s_12TO15,s_15TO18,s_18TO21,s_21TO22,s_22TO23,s_23TO0].reverse();
   var timestampValues = [_0TO3,_3TO6,_6TO9,_9TO12,_12TO15,_15TO18,_18TO21,_21TO22,_22TO23,_23TO0].reverse();
 
