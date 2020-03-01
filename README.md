@@ -5,7 +5,7 @@ HTML, CSS and JavaScript is the front-end functionality. Where the back-bone of 
 
 Manual:
   1. Download the repository.
-  2. In the directory where you located the file, start the server with nodejs command : `node server.js` from the commandprompt.
+  2. In the directory where you downloaded the files, start the server with nodejs command : `node server.js` from the commandprompt.
   3. Start up the web application in your browswer on `localhost:1000`
 
 -- erikwarmegard
