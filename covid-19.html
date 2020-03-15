@@ -45,10 +45,60 @@
       <a class="about" style="float:right" href="about.html">About</a>
     </div>
 
-    <div id="corona-nordic">
+    <div class="navbar">
+      <a class="active" style="float:left">COVID-19</a>
+      <!--<a onclick="toggleItaly()" href="#">Italy: Confirmed</a>-->
+      <div class="dropdown">
+        <button class="dropbtn">Sweden
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a onclick="toggleSweden()" href="#">Confirmed</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">China
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a onclick="toggleChina()" href="#">Confirmed</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Italy
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a onclick="toggleItaly()" href="#">Confirmed</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="corona-sweden-div" style="display:none">
       <span id="graphWrapper">
         <div id="canvasActivity">
           <canvas id="corona-sweden"></canvas>
+        </div>
+      </span>
+    </div>
+    <div id="corona-italy-div" style="display:none">
+      <span id="graphWrapper">
+        <div id="canvasActivity">
+          <canvas id="corona-italy"></canvas>
+        </div>
+      </span>
+    </div>
+    <div id="corona-china-div" style="display:none">
+      <span id="graphWrapper">
+        <div id="canvasActivity">
+          <canvas id="corona-china"></canvas>
         </div>
       </span>
     </div>
