@@ -96,7 +96,6 @@ function plot(content){
     }
   });
 
-  console.log(ChinaConfirmed);
 
   var myChart = new Chart(CTX_SWEDEN_CONFIRMED, {
       type: 'line',

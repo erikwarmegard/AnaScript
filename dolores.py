@@ -14,7 +14,7 @@ import pandas as pd
 import seaborn as sns
 
 
-df = pd.read_csv("sleep-calories.csv", sep=',', names = ['Date', 'Sleep', 'Calories'])
+df = pd.read_csv("sleep-calories.csv", sep=',', names = ['Date', 'Sleep', 'Calories', 'DeepSleepPercentage'])
 
 dates = df.Date
 sleep_data = df.Sleep
