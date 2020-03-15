@@ -12,17 +12,27 @@
   </head>
   <body>
     <h1 id="title">AnaScript | Analytical Calculations with JavaScript & Python</h1>
-    <ul>
-      <li><a href="index.html">Sleep Patterns</a></li>
-      <li><a href="sleepanalysis.html">Sleep Analysis</a></li>
-      <li><a href="bedtimedeepsleep.html">Bed Time: Deep Sleep</a><li>
-      <li><a href="bedtimefreq.html">Bed Time: Frequency</a><li>
-      <li><a href="activities.html">Activities</a></li>
-      <li><a class="active"href="excerciseqos.html">Excercise & QoS</a></li>
-      <li><a href="dolores.html">Dolores</a></li>
-      <li><a href="other.html">Other</a></li>
-      <li style="float:right"><a class="about" href="about.html">About</a></li>
-    </ul>
+    <div class="navbar">
+      <a href="index.html">Sleep Patterns</a>
+      <a href="sleepanalysis.html">Sleep Analysis</a>
+      <a href="bedtimedeepsleep.html">Bed Time: Deep Sleep</a>
+      <a href="bedtimefreq.html">Bed Time: Frequency</a>
+      <a href="activities.html">Activities</a>
+      <a class="active" href="excerciseqos.html">Excercise & QoS</a>
+      <a href="dolores.html">Dolores</a>
+      <div class="dropdown">
+        <button class="dropbtn">Other
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="covid-19.html">COVID-19</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <a class="about" style="float:right" href="about.html">About</a>
+    </div>
+
     <span id="graphWrapper">
       <div id="canvasActivity">
         <canvas id="excercise-qos"></canvas>

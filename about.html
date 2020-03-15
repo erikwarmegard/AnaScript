@@ -12,17 +12,28 @@
   </head>
   <body>
     <h1 id="title">AnaScript | Analytical Calculations with JavaScript & Python</h1>
-    <ul>
-      <li><a href="index.html">Sleep Patterns</a></li>
-      <li><a href="sleepanalysis.html">Sleep Analysis</a></li>
-      <li><a href="bedtimedeepsleep.html">Bed Time: Deep Sleep</a><li>
-      <li><a href="bedtimefreq.html">Bed Time: Frequency</a><li>
-      <li><a href="activities.html">Activities</a></li>
-      <li><a href="excerciseqos.html">Excercise & QoS</a></li>
-      <li><a href="dolores.html">Dolores</a></li>
-      <li><a href="other.html">Other</a></li>
-      <li style="float:right"><a class="about" href="about.html">About</a></li>
-    </ul>
+    <div class="navbar">
+      <a href="index.html">Sleep Patterns</a>
+      <a href="sleepanalysis.html">Sleep Analysis</a>
+      <a href="bedtimedeepsleep.html">Bed Time: Deep Sleep</a>
+      <a href="bedtimefreq.html">Bed Time: Frequency</a>
+      <a href="activities.html">Activities</a>
+      <a href="excerciseqos.html">Excercise & QoS</a>
+      <a href="dolores.html">Dolores</a>
+      <div class="dropdown">
+        <button class="dropbtn">Other
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="covid-19.html">COVID-19</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <a class="about active" style="float:right" href="about.html">About</a>
+    </div>
+
+
     <h2 style="text-align: center; margin-top: 2%;">About</h2>
     <p style="margin-left: 10%; margin-right: 10%">This website serves as a graphical representation of analytical software. Data is logged from my FitBit activity bracelet, extracted as CSV-files and uploaded to the local server. Current data available for analysis and plotting is my sleeping habits and activities during the day. <br />HTML, CSS and JavaScript is the front-end functionality. Where the back-bone of the website is run by Nodejs for server and file management.
 Python packages and libraries are used for complex analysis, JavaScript library Chart.js for graphical representation in the interface. <br /><br />-- erikwarmegard</p>
