@@ -1,13 +1,5 @@
-[X] - Set up file structure
-[X] - Get Server up and running
-[X] - Store file in folder
-[X] - Build the basic foundation of the HTML-page
-  - [X] - Läs in flera filer, hämta från servern.
-[X] - Chartanalytics
-[X] - Create Dolores
-[ ] - Train Dolores
-[X] - Integrate Dolores in main.js
-[X] - Expand the dataset
-[X] - Analyze the possible correlation between calorieburn and deepsleep
-[ ] - improve file structure
-[ ] - Add new screendumps of project
+[X] - Add COVID-19 visualization
+[ ] - Organize the file structure
+[ ] - https://www.kaggle.com/yogeshtak/exercise-your-first-machine-learning-model
+  * Train a model with the covid-19 datasets
+  * Predict the outcome in sweden
