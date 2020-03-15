@@ -7,41 +7,59 @@ function toggleSweden() {
   var sweden = document.getElementById("corona-sweden-div");
   var italy = document.getElementById("corona-italy-div");
   var china = document.getElementById("corona-china-div");
+  var dolores = document.getElementById('sweden-dolores');
   if (sweden.style.display === "none") {
     sweden.style.display = "block";
     italy.style.display = "none";
     china.style.display = "none";
+    dolores.style.display = "none";
   } else {
     sweden.style.display = "none";
   }
-
 }
 
-function toggleItaly(key) {
+function toggleItaly() {
   console.log("gorlami!");
   var sweden = document.getElementById("corona-sweden-div");
   var italy = document.getElementById("corona-italy-div");
   var china = document.getElementById("corona-china-div");
+  var dolores = document.getElementById('sweden-dolores');
   if (italy.style.display === "none") {
     italy.style.display = "block";
     sweden.style.display = "none";
     china.style.display = "none";
+    dolores.style.display = "none";
   } else {
     italy.style.display = "none";
   }
 }
 
-function toggleChina(key) {
+function toggleChina() {
   console.log("Ni hao!");
   var sweden = document.getElementById("corona-sweden-div");
   var italy = document.getElementById("corona-italy-div");
   var china = document.getElementById("corona-china-div");
+  var dolores = document.getElementById('sweden-dolores');
   if (china.style.display === "none") {
     china.style.display = "block";
     sweden.style.display = "none";
     italy.style.display = "none";
+    dolores.style.display = "none";
   } else {
     china.style.display = "none";
+  }
+}
+
+
+function toggleSwedenDolores(){
+  var dolores = document.getElementById('sweden-dolores');
+  if (dolores.style.display === "none") {
+    dolores.style.display = "block";
+    china.style.display = "none";
+    sweden.style.display = "none";
+    italy.style.display = "none";
+  } else {
+    dolores.style.display = "none";
   }
 }
 
